@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Executive Director & Senior Research Scholar, <a href='https://immigrationlab.org'>Immigration Policy Lab</a>, Stanford University
+subtitle: Executive Director & Senior Research Scholar, <a href="https://immigrationlab.org">Immigration Policy Lab</a>, Stanford University
 
 profile:
   align: right
