@@ -2,33 +2,34 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Executive Director & Senior Research Scholar, <a href='https://immigrationlab.org'>Immigration Policy Lab</a>, Stanford University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Stanford, CA</p>
+    <p>dlawrenc@stanford.edu</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm the Executive Director and Senior Research Scholar at the [Immigration Policy Lab](https://immigrationlab.org) at Stanford University, where I lead a team using rigorous research to improve immigration and refugee policy.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My work sits at the intersection of research and action. I've co-authored studies published in *Science*, *PNAS*, and *Nature Human Behaviour* that have shaped how governments place refugees, help immigrants become citizens, and understand the health impacts of immigration policy. But I didn't start in academia—I've worked as a medical interpreter, a wilderness guide, and spent time in Argentina and Chile as a Fulbright fellow.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I founded IPL in 2014 and built it into a team of 30+ researchers working across 10 countries. Along the way, we've partnered with the U.S. State Department, DHS, and agencies in the Netherlands, Switzerland, and Canada to turn research insights into real programs that help people.
+
+When I'm not thinking about immigration policy, you might find me on a trail somewhere or volunteering at a citizenship workshop.
