@@ -56,40 +56,46 @@ map: true
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // --- JOB DATA ---
+  // --- JITTER: offset coordinates by ~5-10 miles for privacy ---
+  function jitter(coord) {
+    var offset = (Math.random() - 0.5) * 0.15; // ~5-10 mile random offset
+    return coord + offset;
+  }
+
+  // --- JOB DATA (locations are approximate, regions only) ---
   var jobs = [
     {
       company: "Francestown Recreation Department",
       title: "Raft Guard",
-      location: "Francestown, NH",
+      location: "Southern NH",
       years: "1994–1995",
       description: "Made sure there was no pushing on the raft!",
       icon: "fa-solid fa-person-swimming",
       color: "#1976d2",
-      lat: 42.9876,
-      lng: -71.8109
+      lat: jitter(42.99),
+      lng: jitter(-71.81)
     },
     {
       company: "Blair Bristol Construction",
       title: "Carpenter / Framer / Roofer",
-      location: "Antrim, NH",
+      location: "Southern NH",
       years: "1996–2004",
       description: "Built and framed residential homes.",
       icon: "fa-solid fa-house",
       color: "#d84315",
-      lat: 43.0281,
-      lng: -71.9387
+      lat: jitter(43.03),
+      lng: jitter(-71.94)
     }
   ];
 
   // --- MAP INIT ---
   var map = L.map("work-map", {
     scrollWheelZoom: false
-  }).setView([43.0, -71.87], 11);
+  }).setView([43.0, -71.87], 10);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 18
+    maxZoom: 12
   }).addTo(map);
 
   // --- ADD MARKERS ---
@@ -113,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     marker.bindPopup(
       '<h5 class="popup-title">' + job.company + '</h5>' +
       '<p><strong>' + job.title + '</strong></p>' +
-      '<p class="popup-years">' + job.location + ' · ' + job.years + '</p>' +
+      '<p class="popup-years">' + job.years + '</p>' +
       '<p>' + job.description + '</p>'
     );
 
