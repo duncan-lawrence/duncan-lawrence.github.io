@@ -62,36 +62,212 @@ document.addEventListener("DOMContentLoaded", function () {
     return coord + offset;
   }
 
-  // --- JOB DATA (locations are approximate, regions only) ---
+  // --- JOB DATA (coordinates are approximate, jittered for privacy) ---
   var jobs = [
     {
       company: "Francestown Recreation Department",
       title: "Raft Guard",
-      location: "Southern NH",
       years: "1994–1995",
       description: "Made sure there was no pushing on the raft!",
       icon: "fa-solid fa-person-swimming",
       color: "#1976d2",
-      lat: jitter(42.99),
-      lng: jitter(-71.81)
+      lat: jitter(42.99), lng: jitter(-71.81)
+    },
+    {
+      company: "Lawrence's Lawns",
+      title: "Head Mower",
+      years: "1995",
+      description: "Ran my own lawn mowing business. Had to be within walking distance!",
+      icon: "fa-solid fa-seedling",
+      color: "#388e3c",
+      lat: jitter(42.99), lng: jitter(-71.81)
     },
     {
       company: "Blair Bristol Construction",
       title: "Carpenter / Framer / Roofer",
-      location: "Southern NH",
       years: "1996–2004",
       description: "Built and framed residential homes.",
       icon: "fa-solid fa-house",
       color: "#d84315",
-      lat: jitter(43.03),
-      lng: jitter(-71.94)
+      lat: jitter(43.03), lng: jitter(-71.94)
+    },
+    {
+      company: "Hamilton College Outdoor Leadership",
+      title: "Facilitator",
+      years: "2001–2004",
+      description: "Climbed trees and expanded minds through challenge by choice.",
+      icon: "fa-solid fa-tree",
+      color: "#2e7d32",
+      lat: jitter(43.05), lng: jitter(-75.40)
+    },
+    {
+      company: "Hulbert Outdoor Center",
+      title: "Instructor",
+      years: "2004",
+      description: "Led groups through week long experiential education journeys.",
+      icon: "fa-solid fa-tree",
+      color: "#2e7d32",
+      lat: jitter(43.90), lng: jitter(-72.16)
+    },
+    {
+      company: "Wilderness Adventures",
+      title: "Wilderness Guide / Trip Director",
+      years: "2004",
+      description: "Led multi-week wilderness trips.",
+      icon: "fa-solid fa-hiking",
+      color: "#5d4037",
+      lat: jitter(43.74), lng: jitter(-110.80)
+    },
+    {
+      company: "Jackson Hole Mtn Resort",
+      title: "Rental Tech",
+      years: "2004–2005",
+      description: "Made sure your boots and skis fit perfectly.",
+      icon: "fa-solid fa-skiing",
+      color: "#0288d1",
+      lat: jitter(43.59), lng: jitter(-110.83)
+    },
+    {
+      company: "Best Western",
+      title: "Bell Hop",
+      years: "2004–2005",
+      description: "Getting your bag to your room was my mission.",
+      icon: "fa-solid fa-concierge-bell",
+      color: "#7b1fa2",
+      lat: jitter(43.59), lng: jitter(-110.82)
+    },
+    {
+      company: "US State Department",
+      title: "Fulbright ETA",
+      years: "2005",
+      description: "Taught English at a teacher training college.",
+      icon: "fa-solid fa-book",
+      color: "#1565c0",
+      lat: jitter(-33.08), lng: jitter(-68.47)
+    },
+    {
+      company: "Wilderness Adventures",
+      title: "Wilderness Guide / Trip Director",
+      years: "2006",
+      description: "Led multi-week adventure trips.",
+      icon: "fa-solid fa-hiking",
+      color: "#5d4037",
+      lat: jitter(-0.18), lng: jitter(-78.47)
+    },
+    {
+      company: "Wilderness Adventures",
+      title: "Wilderness Guide / Trip Director",
+      years: "2006",
+      description: "Led multi-week adventure trips.",
+      icon: "fa-solid fa-hiking",
+      color: "#5d4037",
+      lat: jitter(8.53), lng: jitter(-83.53)
+    },
+    {
+      company: "Wilderness Adventures",
+      title: "Wilderness Guide / Trip Director",
+      years: "2006",
+      description: "Led multi-day family adventure trips.",
+      icon: "fa-solid fa-hiking",
+      color: "#5d4037",
+      lat: jitter(44.46), lng: jitter(-110.83)
+    },
+    {
+      company: "Teton Youth and Family Services",
+      title: "Youth Counselor",
+      years: "2006–2007",
+      description: "Mentored and ensured the safety of up to 9 children in a youth shelter.",
+      icon: "fa-solid fa-handshake",
+      color: "#e65100",
+      lat: jitter(43.48), lng: jitter(-110.76)
+    },
+    {
+      company: "El Puente",
+      title: "Medical Interpreter and Health Navigator",
+      years: "2006–2007, 2010",
+      description: "Helped Spanish-speaking patients navigate the health system.",
+      icon: "fa-solid fa-kit-medical",
+      color: "#c62828",
+      lat: jitter(43.48), lng: jitter(-110.76)
+    },
+    {
+      company: "University of Colorado Boulder",
+      title: "Graduate Instructor",
+      years: "2007–2013",
+      description: "Taught undergrads comparative politics, IPE, and development.",
+      icon: "fa-solid fa-book",
+      color: "#1565c0",
+      lat: jitter(40.01), lng: jitter(-105.27)
+    },
+    {
+      company: "University of Colorado Boulder",
+      title: "Methods Mentor",
+      years: "2012",
+      description: "Provided survey design and implementation expertise.",
+      icon: "fa-solid fa-magnifying-glass",
+      color: "#4527a0",
+      lat: jitter(-16.41), lng: jitter(-71.54)
+    },
+    {
+      company: "Telluride Research Group",
+      title: "Co-founder",
+      years: "2012–2016",
+      description: "Co-founded and led a data analysis and research firm.",
+      icon: "fa-solid fa-chart-line",
+      color: "#00838f",
+      lat: jitter(40.01), lng: jitter(-105.27)
+    },
+    {
+      company: "US State Department",
+      title: "Fulbright Scholar",
+      years: "2013",
+      description: "Led research on immigration attitudes.",
+      icon: "fa-solid fa-book",
+      color: "#1565c0",
+      lat: jitter(-33.45), lng: jitter(-70.66)
+    },
+    {
+      company: "Rocky Mountain Institute",
+      title: "Associate",
+      years: "2013–2014",
+      description: "Consulted and designed new programs.",
+      icon: "fa-solid fa-pen",
+      color: "#37474f",
+      lat: jitter(40.01), lng: jitter(-105.27)
+    },
+    {
+      company: "Stanford University",
+      title: "Executive Director",
+      years: "2014–2022, 2025–Present",
+      description: "Co-founded and led the Immigration Policy Lab.",
+      icon: "fa-solid fa-book",
+      color: "#1565c0",
+      lat: jitter(37.43), lng: jitter(-122.17)
+    },
+    {
+      company: "Welcome.us",
+      title: "Consultant",
+      years: "2022",
+      description: "Guided data strategy.",
+      icon: "fa-solid fa-chart-line",
+      color: "#00838f",
+      lat: jitter(45.52), lng: jitter(-122.68)
+    },
+    {
+      company: "International Rescue Committee",
+      title: "Senior Director of Innovation",
+      years: "2023–2025",
+      description: "Led innovation in US and Europe.",
+      icon: "fa-solid fa-handshake",
+      color: "#e65100",
+      lat: jitter(45.52), lng: jitter(-122.68)
     }
   ];
 
   // --- MAP INIT ---
   var map = L.map("work-map", {
     scrollWheelZoom: false
-  }).setView([43.0, -71.87], 10);
+  }).setView([20, -90], 3);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
